@@ -1,0 +1,11 @@
+
+pt-BR:
+  admin:
+    actions:
+      report:
+        title: "Relatorios"
+        menu: "Relatórios"
+        breadcrumb: "Relatorios"
+        link: "Relatorios"
+        bulk_link: "Relatorios"
+        done: "Relatorios"
