@@ -1,156 +1,233 @@
 <style>
 
-.huge {
-    font-size: 40px;
-}
+    .huge {
+        font-size: 40px;
+    }
+    .huge-money {
+        font-size: 24px;
+    }
+    .huge-text {
+        font-size: 19px;
+    }
 
-.panel-green {
-    border-color: #5cb85c;
-}
+    .panel-green {
+        border-color: #5cb85c;
+    }
 
-.panel-green .panel-heading {
-    border-color: #5cb85c;
-    color: #fff;
-    background-color: #5cb85c;
-}
+    .panel-green .panel-heading {
+        border-color: #5cb85c;
+        color: #fff;
+        background-color: #5cb85c;
+    }
 
-.panel-green a {
-    color: #5cb85c;
-}
+    .panel-green a {
+        color: #5cb85c;
+    }
+    .panel-green a:hover {
+        color: #3d8b3d;
+    }
 
-.panel-green a:hover {
-    color: #3d8b3d;
-}
+    .panel-red {
+        border-color: #d9534f;
+    }
 
-.panel-red {
-    border-color: #d9534f;
-}
+    .panel-red .panel-heading {
+        border-color: #d9534f;
+        color: #fff;
+        background-color: #d9534f;
+    }
 
-.panel-red .panel-heading {
-    border-color: #d9534f;
-    color: #fff;
-    background-color: #d9534f;
-}
+    .panel-red a {
+        color: #d9534f;
+    }
+    .panel-red a:hover {
+        color: #b52b27;
+    }
 
-.panel-red a {
-    color: #d9534f;
-}
+    .panel-yellow {
+        border-color: #f0ad4e;
+    }
 
-.panel-red a:hover {
-    color: #b52b27;
-}
+    .panel-yellow .panel-heading {
+        border-color: #f0ad4e;
+        color: #fff;
+        background-color: #f0ad4e;
+    }
 
-.panel-yellow {
-    border-color: #f0ad4e;
-}
-
-.panel-yellow .panel-heading {
-    border-color: #f0ad4e;
-    color: #fff;
-    background-color: #f0ad4e;
-}
-
-.panel-yellow a {
-    color: #f0ad4e;
-}
-
-.panel-yellow a:hover {
-    color: #df8a13;
-}
+    .panel-yellow a {
+        color: #f0ad4e;
+    }
+    .panel-yellow a:hover {
+        color: #df8a13;
+    }
 
 </style>
 <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="panel panel-primary">
-                        <div class="panel-heading">
-                            <div class="row">
-                                <div class="col-xs-3">
-                                    <i class="fa fa-files-o fa-5x"></i>
-                                </div>
-                                <div class="col-xs-9 text-right">
-                                    <div class="huge"><%= @total_contracts %></div>
-                                    <div>Total de Contratos</div>
-                                </div>
-                            </div>
-                        </div>
-                        <a href="contract">
-                            <div class="panel-footer">
-                                <span class="pull-left">Saiba Mais</span>
-                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                <div class="clearfix"></div>
-                            </div>
-                        </a>
+    <div class="col-lg-4 col-md-6">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <i class="fa fa-files-o fa-5x"></i>
+                    </div>
+                    <div class="col-xs-9 text-right">
+                        <div class="huge"><%= @total_contracts %></div>
+                        <div class="huge-text">Total de Contratos</div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="panel panel-green">
-                        <div class="panel-heading">
-                            <div class="row">
-                                <div class="col-xs-3">
-                                    <i class="fa fa-users fa-5x"></i>
-                                </div>
-                                <div class="col-xs-9 text-right">
-                                    <div class="huge"><%= @total_accountability %></div>
-                                    <div>Contratos com Fiscais</div>
-                                </div>
-                            </div>
-                        </div>
-                        <a href="accountability">
-                            <div class="panel-footer">
-                                <span class="pull-left">Saiba Mais</span>
-                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                <div class="clearfix"></div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="panel panel-yellow">
-                        <div class="panel-heading">
-                            <div class="row">
-                                <div class="col-xs-3">
-                                    <i class="fa fa-shopping-cart fa-5x"></i>
-                                </div>
-                                <div class="col-xs-9 text-right">
-                                    <div class="huge"><%= @total_accountability %></div>
-                                    <div>Fornecedores Cadatrados</div>
-                                </div>
-                            </div>
-                        </div>
-                        <a href="vendor">
-                            <div class="panel-footer">
-                                <span class="pull-left">Saiba Mais</span>
-                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                <div class="clearfix"></div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <!-- <div class="col-lg-6 col-md-6">
-                    <div class="panel panel-red">
-                        <div class="panel-heading">
-                            <div class="row">
-                                <div class="col-xs-3">
-                                    <i class="fa fa-money fa-5x"></i>
-                                </div>
-                                <div class="col-xs-9 text-right">
-                                    <div class="huge"><%= humanized_money_with_symbol(@total_value) %></div>
-                                    <div>Total contratado</div>
-                                </div>
-                            </div>
-                        </div>
-                        <a href="#">
-                            <div class="panel-footer">
-                                <span class="pull-left">Saiba Mais</span>
-                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                <div class="clearfix"></div>
-                            </div>
-                        </a>
-                    </div>
-                </div> -->
             </div>
+            <a href="contract">
+                <div class="panel-footer">
+                    <span class="pull-left">Saiba Mais</span>
+                    <span class="pull-right">
+                        <i class="fa fa-arrow-circle-right"></i>
+                    </span>
+                    <div class="clearfix"></div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-6">
+        <div class="panel panel-green">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <i class="fa fa-users fa-5x"></i>
+                    </div>
+                    <div class="col-xs-9 text-right">
+                        <div class="huge"><%= @total_accountability %></div>
+                        <div class="huge-text">Contratos com Fiscais</div>
+                    </div>
+                </div>
+            </div>
+            <a href="accountability">
+                <div class="panel-footer">
+                    <span class="pull-left">Saiba Mais</span>
+                    <span class="pull-right">
+                        <i class="fa fa-arrow-circle-right"></i>
+                    </span>
+                    <div class="clearfix"></div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-6">
+        <div class="panel panel-yellow">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <i class="fa fa-shopping-cart fa-5x"></i>
+                    </div>
+                    <div class="col-xs-9 text-right">
+                        <div class="huge"><%= @total_vendors %></div>
+                        <div class="huge-text">Fornecedores</div>
+                    </div>
+                </div>
+            </div>
+            <a href="vendor">
+                <div class="panel-footer">
+                    <span class="pull-left">Saiba Mais</span>
+                    <span class="pull-right">
+                        <i class="fa fa-arrow-circle-right"></i>
+                    </span>
+                    <div class="clearfix"></div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Distribuição por unidade -->
 <div class="row">
-    <div class="col-md-6">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <i class="fa fa-bar-chart-o fa-fw"></i>
+            Contratos setor solicitante
+        </div>
+        <!-- /.panel-heading -->
+        <div class="panel-body">
+            <%= column_chart @chart_requesting %>
+        </div>
+        <!-- /.panel-body -->
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-4 col-md-6">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <i class="fa fa-money fa-5x"></i>
+                    </div>
+                    <div class="col-xs-9 text-right">
+                        <div class="huge-money"><%= money_without_cents_and_with_symbol(@total_value) %></div>
+                        <div class="huge-text">Total Contratado</div>
+                    </div>
+                </div>
+            </div>
+            <a href="contract">
+                <div class="panel-footer">
+                    <span class="pull-left">Saiba Mais</span>
+                    <span class="pull-right">
+                        <i class="fa fa-arrow-circle-right"></i>
+                    </span>
+                    <div class="clearfix"></div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-6">
+        <div class="panel panel-green">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <i class="fa fa-money fa-5x"></i>
+                    </div>
+                    <div class="col-xs-9 text-right">
+                        <div class="huge-money"><%= money_without_cents_and_with_symbol(@total_budget) %></div>
+                        <div class="huge-text" >Total Empenhado</div>
+                    </div>
+                </div>
+            </div>
+            <a href="accountability">
+                <div class="panel-footer">
+                    <span class="pull-left">Saiba Mais</span>
+                    <span class="pull-right">
+                        <i class="fa fa-arrow-circle-right"></i>
+                    </span>
+                    <div class="clearfix"></div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-6">
+        <div class="panel panel-yellow">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <i class="fa fa-money fa-5x"></i>
+                    </div>
+                    <div class="col-xs-9 text-right">
+                        <div class="huge-money"><%= money_without_cents_and_with_symbol(@total_executed) %></div>
+                        <div class="huge-text">Total Executado</div>
+                    </div>
+                </div>
+            </div>
+            <a href="vendor">
+                <div class="panel-footer">
+                    <span class="pull-left">Saiba Mais</span>
+                    <span class="pull-right">
+                        <i class="fa fa-arrow-circle-right"></i>
+                    </span>
+                    <div class="clearfix"></div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+<!-- Modelo de Contratação e Instumento  -->
+<div class="row">
+
         <div class="panel panel-default">
             <div class="panel-heading">
                 <i class="fa fa-bar-chart-o fa-fw"></i>
@@ -158,27 +235,14 @@
             </div>
             <!-- /.panel-heading -->
             <div class="panel-body">
-              <%= bar_chart @chart_contract_type %>
+                <%= column_chart @chart_contract_model %>
             </div>
             <!-- /.panel-body -->
         </div>
-    </div>
-    <div class="col-md-6">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <i class="fa fa-bar-chart-o fa-fw"></i>
-                Contratos setor solicitante
-            </div>
-            <!-- /.panel-heading -->
-            <div class="panel-body">
-              <%= pie_chart @chart_requesting %>
-            </div>
-            <!-- /.panel-body -->
-        </div>
-    </div>
 
 
 </div>
+
 <div class="row">
     <div class="col-md-6">
         <div class="panel panel-default">
@@ -188,7 +252,7 @@
             </div>
             <!-- /.panel-heading -->
             <div class="panel-body">
-              <%= pie_chart @chart_contract_model %>
+                <%= pie_chart @chart_contract_type %>
             </div>
             <!-- /.panel-body -->
         </div>
@@ -201,10 +265,9 @@
             </div>
             <!-- /.panel-heading -->
             <div class="panel-body">
-              <%= pie_chart @chart_object_type %>
+                <%= pie_chart @chart_object_type %>
             </div>
             <!-- /.panel-body -->
         </div>
     </div>
-</div>
 </div>

@@ -83,9 +83,12 @@ module RailsAdmin
               [item['_id'], item['value']]
             end]
 
-            @total_contracts = Contract.all.count
+            contrato = Contract.all.cache
+            @total_contracts = contrato.count
             @total_accountability = Accountability.all.count
-            @total_value = Contract.all.sum(:total_value)
+            @total_value = contrato.sum(:total_value)
+            @total_budget = contrato.sum(:total_budget)
+            @total_executed = contrato.sum(:total_executed)
             @total_vendors = Vendor.all.count
 
             render @action.template_name, status: 200
