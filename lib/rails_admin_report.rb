@@ -80,10 +80,10 @@ module RailsAdmin
 
             requesting_map = Contract.map_reduce(map_requesting, reduce).out(replace: "requesting_db")
             @chart_requesting = Hash[requesting_map.map do |item|
-              [item['_id'], item['value']]
-            end]
+                                      [item['_id'], item['value']]
+                                    end]
 
-            contrato = Contract.all.cache
+            contrato = Contract.all
             @total_contracts = contrato.count
             @total_accountability = Accountability.all.count
             @total_value = contrato.sum(:total_value)
